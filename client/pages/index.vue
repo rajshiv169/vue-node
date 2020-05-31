@@ -16,7 +16,7 @@
                 <div class="s-item-container">
                   <!-- best seller -->
                   <div class="a-spacing-micro">
-                    <div class="bestseller">
+                    <div class="bestSeller">
                       <a href="#">Best Seller</a>
                     </div>
                   </div>
