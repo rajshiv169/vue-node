@@ -41,11 +41,13 @@ const ProductRoutes = require("./routes/product");
 const CategoryRoutes = require("./routes/category");
 const OwnerRoutes = require("./routes/owner");
 const UserRoutes = require("./routes/auth");
+const ReviewRoutes = require("./routes/review");
 
 app.use("/api", ProductRoutes);
 app.use("/api", CategoryRoutes);
 app.use("/api", OwnerRoutes);
 app.use("/api", UserRoutes);
+app.use("/api", ReviewRoutes);
 
 app.listen(3000, (err) => {
     if(err) {
