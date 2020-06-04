@@ -42,12 +42,14 @@ const CategoryRoutes = require("./routes/category");
 const OwnerRoutes = require("./routes/owner");
 const UserRoutes = require("./routes/auth");
 const ReviewRoutes = require("./routes/review");
+const AddressRoutes = require("./routes/address");
 
 app.use("/api", ProductRoutes);
 app.use("/api", CategoryRoutes);
 app.use("/api", OwnerRoutes);
 app.use("/api", UserRoutes);
 app.use("/api", ReviewRoutes);
+app.use("/api", AddressRoutes);
 
 app.listen(3000, (err) => {
     if(err) {
