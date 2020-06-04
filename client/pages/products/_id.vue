@@ -229,7 +229,7 @@
 
                                         <!-- Product Price -->
                                         <div class="float-right">
-                                            <span class="a-size-medium a-color-price offer-price a-text-normal">${{product.price}}</span>
+                                            <span class="a-size-medium a-color-price offer-price a-text-normal">Rs. {{product.price}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@
                                 </div>
 
                                 <div class="a-section">
-                                    <div class="a-button-stack">
+                                    <div class="a-button-stack" @click="addProductToCart(product)">
                                         <span class="a-spacing-small a-button-primary a-button-icon">
                                             <span class="a-button-inner">
                                                 <i class="a-icon a-icon-cart"></i>
@@ -312,7 +312,7 @@
                                             </form>
                                         </div>
                                         <div class="float-right">
-                                            <span class="a-color-base offer-price a-text-normal">${{product.price}}</span>
+                                            <span class="a-color-base offer-price a-text-normal">Rs. {{product.price}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -368,6 +368,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import ReviewSection from "~/components/ReviewSection";
 import StarRating from "vue-star-rating";
 export default {
@@ -386,7 +387,7 @@ export default {
                 manyReviews
             ]);
             // console.log(productResponse);
-            console.log(reviewsResponse);
+            //console.log(reviewsResponse);
 
             return {
                 product: productResponse.product,
@@ -396,7 +397,11 @@ export default {
         } catch(err){
             console.log(err);
         }
+    },
+
+    methods: {
+        ...mapActions(["addProductToCart"])
     }
     
-}
+};
 </script>
