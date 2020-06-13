@@ -65,7 +65,7 @@
                             <!-- price -->
                             <div class="a-row a-spacing-none">
                               <a href="#" class="a-link-normal a-text-normal">
-                                <span class="a-offscreen">${{product.price}}</span>
+                                <span class="a-offscreen">Rs {{product.price}}</span>
                                 <span class="a-color-base sx-zero-spacing">
                                   <span class="sx-price sx-price-large">
                                     <sup class="sx-price-currency">$</sup>
@@ -140,6 +140,7 @@ export default {
   async asyncData({ $axios }){
     try {
       let response = await $axios.$get("/api/products");
+      console.log(response);
       // console.log(response);
       return {
         products: response.products

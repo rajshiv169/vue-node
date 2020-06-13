@@ -43,6 +43,7 @@ const OwnerRoutes = require("./routes/owner");
 const UserRoutes = require("./routes/auth");
 const ReviewRoutes = require("./routes/review");
 const AddressRoutes = require("./routes/address");
+const PaymentRoutes = require("./routes/payment");
 
 app.use("/api", ProductRoutes);
 app.use("/api", CategoryRoutes);
@@ -50,6 +51,7 @@ app.use("/api", OwnerRoutes);
 app.use("/api", UserRoutes);
 app.use("/api", ReviewRoutes);
 app.use("/api", AddressRoutes);
+app.use("/api", PaymentRoutes);
 
 app.listen(3000, (err) => {
     if(err) {
